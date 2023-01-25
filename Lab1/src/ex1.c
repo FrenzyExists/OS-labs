@@ -1,6 +1,13 @@
 #include "include/ex1.h"
 void update(int *a, int *b){
     // TODO
+    int old_a = *a;
+    (*a) = *a - *b;
+    if (*a % 2 != 0) {
+        (*b) = abs(*b-old_a);
+    } else {
+        (*b) = (old_a) * (*b);
+    }
 }
 int main(void){
     // Tests Variables
